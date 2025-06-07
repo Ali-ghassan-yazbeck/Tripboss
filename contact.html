@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>TripBoss</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- fonts -->
+        <link rel="stylesheet" href="font/fonts.css">
+        <!-- normalize css -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <!-- custom css -->
+        <link rel="stylesheet" href="css/utility.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <!-- Added Animations and Scroll Effects -->
+        <style>
+            /* All elements with .scroll-animate will start hidden */
+            .scroll-animate {
+                opacity: 0;
+            }
+            /* When they become visible, they fade in smoothly */
+            .scroll-animate.visible {
+                animation: fadeInScroll 1.5s ease forwards;
+            }
+            @keyframes fadeInScroll {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            /* New title animation: slide in smoothly from the left (no jumping) */
+            .slide-in-title {
+                opacity: 0;
+                animation: slideInLeft 1.5s ease-out forwards;
+            }
+            @keyframes slideInLeft {
+                from {
+                    opacity: 0;
+                    transform: translateX(-50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- navbar  -->
+        <nav class="navbar">
+            <div class="container flex">
+                <a href="index.html" class="site-brand">
+                    Trip<span>Boss</span>
+                </a>
+                <button type="button" id="navbar-show-btn" class="flex">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div id="navbar-collapse">
+                    <button type="button" id="navbar-close-btn" class="flex">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="gallery.html" class="nav-link">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-link">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- end of navbar  -->
+
+        <!-- header -->
+        <header class="flex header-sm scroll-animate">
+            <div class="container">
+                <div class="header-title slide-in-title">
+                    <h1>Connect with Lebanese Hospitality</h1>
+                    <p>Experience the warmth and passion of Lebanon. Our dedicated team is here to help you embark on a journey through rich history, culture, and tradition.</p>
+                </div>
+            </div>
+        </header>
+        <!-- end of header -->
+
+        <!-- contact section -->
+        <section id="contact" class="py-4 scroll-animate">
+            <div class="container">
+                <div class="title-wrap">
+                    <span class="sm-title">Reach Out to Us</span>
+                    <h2 class="lg-title">Contact Us</h2>
+                </div>
+
+                <div class="contact-row">
+                    <div class="contact-left">
+                        <form id="contactForm" class="contact-form" method="POST" action="php/contact.php">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                            <textarea rows="4" name="message" class="form-control" placeholder="Your Message" style="resize: none;" required></textarea>
+                            <input type="submit" class="btn" value="Send Message">
+                        </form>
+                    </div>
+                    <div class="contact-right my-2">
+                        <div class="contact-item">
+                            <span class="contact-icon flex">
+                                <i class="fa fa-phone-alt"></i>
+                            </span>
+                            <div>
+                                <span>Phone</span>
+                                <p class="text">+961-81-061-318</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon flex">
+                                <i class="fa fa-map-marked-alt"></i>
+                            </span>
+                            <div>
+                                <span>Address</span>
+                                <p class="text">Baalbeck, Beqaa, Lebanon</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon flex">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                            <div>
+                                <span>Email</span>
+                                <p class="text">alighass2002@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of contact section -->
+
+        <!-- footer -->
+        <footer class="py-4 scroll-animate">
+            <div class="container footer-row">
+                <div class="footer-item">
+                    <a href="index.html" class="site-brand">
+                        Trip<span>Boss</span>
+                    </a>
+                    <p class="text">Embark on a Lebanese adventure with TripBoss. Discover a land of ancient heritage, warm hospitality, and stunning vistas that capture the spirit of Lebanon.</p>
+                </div>
+
+                <div class="footer-item">
+                    <h2>Follow us on: </h2>
+                    <ul class="social-links">
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/aliiyazbeck/" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-pinterest"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-google-plus"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-item">
+                    <h2>Popular Places:</h2>
+                    <ul>
+                        <li><a href="https://en.wikipedia.org/wiki/Beirut" target="_blank">Beirut</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Tripoli,_Lebanon" target="_blank">Tripoli</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Byblos" target="_blank">Byblos</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Sidon" target="_blank">Sidon</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Zahle" target="_blank">Zahle</a></li>
+                    </ul>
+                </div>
+
+                <div class="subscribe-form footer-item">
+                    <h2>Subscribe for Newsletter!</h2>
+                    <form method="POST" action="php/subscribe.php" class="flex">
+                        <input type="email" name="email" placeholder="Enter Email" class="form-control">
+                        <input type="submit" class="btn" value="Subscribe">
+                    </form>
+                </div>
+            </div>
+        </footer>
+        <!-- end of footer -->
+
+        <!-- js -->
+        <script src="js/script.js"></script>
+        <script>
+            // Scroll-triggered animation for all elements with the 'scroll-animate' class
+            const scrollElements = document.querySelectorAll('.scroll-animate');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+            scrollElements.forEach(el => {
+                observer.observe(el);
+            });
+        </script>
+    </body>
+</html>

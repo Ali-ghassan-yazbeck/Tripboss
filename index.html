@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>TripBoss</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- fonts -->
+        <link rel="stylesheet" href="font/fonts.css">
+        <!-- normalize css -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <!-- custom css -->
+        <link rel="stylesheet" href="css/utility.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <!-- Added Animations and Scroll Effects -->
+        <style>
+            /* All elements with .scroll-animate will start hidden */
+            .scroll-animate {
+                opacity: 0;
+            }
+            /* When they become visible, they fade in smoothly */
+            .scroll-animate.visible {
+                animation: fadeInScroll 1.5s ease forwards;
+            }
+            @keyframes fadeInScroll {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            /* New title animation: slide in smoothly from the left (no jumping) */
+            .slide-in-title {
+                opacity: 0;
+                animation: slideInLeft 1.5s ease-out forwards;
+            }
+            @keyframes slideInLeft {
+                from {
+                    opacity: 0;
+                    transform: translateX(-50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- navbar  -->
+        <nav class="navbar">
+            <div class="container flex">
+                <a href="index.html" class="site-brand">
+                    Trip<span>Boss</span>
+                </a>
+
+                <button type="button" id="navbar-show-btn" class="flex">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div id="navbar-collapse">
+                    <button type="button" id="navbar-close-btn" class="flex">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="gallery.html" class="nav-link">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-link">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- end of navbar  -->
+
+        <!-- header -->
+        <header class="flex scroll-animate">
+            <div class="container">
+                <div class="header-title slide-in-title">
+                    <h1>Discover the Spirit of Lebanon</h1>
+                    <p>Embrace a journey where ancient history meets modern vibrance. Let Lebanon's enchanting cities and warm hospitality guide your adventure.</p>
+                </div>
+                <div class="header-form scroll-animate">
+                    <h2>Choose Your Lebanese Destination:</h2>
+                    <form class="flex" method="POST" action="php/Submit.php">
+                        <input type="text" name="destination" class="form-control" placeholder="Destination name" required>
+                        <input type="date" name="date" class="form-control" placeholder="Date" required>
+                        <input type="text" name="number_of_people" class="form-control" placeholder="Number of Travelers" required>
+                        <input type="submit" class="btn" value="Submit">
+                    </form>
+
+                </div>
+            </div>
+        </header>
+        <!-- header -->
+
+        <!-- featured section -->
+        <section id="featured" class="py-4 scroll-animate">
+            <div class="container">
+                <div class="title-wrap">
+                    <span class="sm-title">Experience the Authentic Lebanese Charm</span>
+                    <h2 class="lg-title">Featured Destinations</h2>
+                </div>
+
+                <div class="featured-row">
+                    <div class="featured-item my-2 shadow">
+                        <img src="images/beirut.jpg" alt="featured place">
+                        <div class="featured-item-content">
+                            <span>
+                                <i class="fas fa-map-marker-alt"></i>
+                                Beirut, Lebanon
+                            </span>
+                            <div>
+                                <p class="text">Beirut pulses with energy, blending rich history with a contemporary urban vibe. A city that never ceases to inspire.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="featured-item my-2 shadow">
+                        <img src="images/tripoli.jpg" alt="featured place">
+                        <div class="featured-item-content">
+                            <span>
+                                <i class="fas fa-map-marker-alt"></i>
+                                Tripoli, Lebanon
+                            </span>
+                            <div>
+                                <p class="text">Tripoli's ancient souks and historic landmarks offer a glimpse into Lebanon’s storied past and vibrant present.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="featured-item my-2 shadow">
+                        <img src="images/byblos.jpg" alt="featured place" >
+                        <div class="featured-item-content">
+                            <span>
+                                <i class="fas fa-map-marker-alt"></i>
+                                Byblos, Lebanon
+                            </span>
+                            <div>
+                                <p class="text">One of the world's oldest cities, Byblos enchants with its timeless ruins and serene coastal allure.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="featured-item my-2 shadow">
+                        <img src="images/sidon.jpg" alt="featured place">
+                        <div class="featured-item-content">
+                            <span>
+                                <i class="fas fa-map-marker-alt"></i>
+                                Sidon, Lebanon
+                            </span>
+                            <div>
+                                <p class="text">Sidon captivates with its historic fortresses and scenic Mediterranean views, echoing tales of old.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="featured-item my-2 shadow">
+                        <img src="images/baalbek.jpg" alt="featured place">
+                        <div class="featured-item-content">
+                            <span>
+                                <i class="fas fa-map-marker-alt"></i>
+                                Baalbek, Lebanon
+                            </span>
+                            <div>
+                                <p class = "text">Marvel at the colossal Roman temples of Baalbek, a UNESCO World Heritage site. Explore the Temple of Bacchus, Temple of Jupiter, and Temple of Venus, testaments to Roman grandeur.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="featured-item my-2 shadow">
+                        <img src="images/jounieh.jpg" alt="featured place">
+                        <div class="featured-item-content">
+                            <span>
+                                <i class="fas fa-map-marker-alt"></i>
+                                Jounieh, Lebanon
+                            </span>
+                            <div>
+                                <p class="text">Jounieh offers breathtaking coastal views and a lively atmosphere, perfect for a rejuvenating escape.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of featured section -->
+
+        <!-- services section -->
+        <section id="services" class="py-4 scroll-animate">
+            <div class="container">
+                <div class="title-wrap">
+                    <span class="sm-title">Our Lebanese Hospitality</span>
+                    <h2 class="lg-title">Our Services</h2>
+                </div>
+
+                <div class="services-row">
+                    <div class="services-item">
+                        <span class="services-icon">
+                            <i class="fas fa-hotel"></i>
+                        </span>
+                        <h3>Luxurious Hotels</h3>
+                        <p class="text">Experience world-class Lebanese hospitality in our curated hotels, where tradition meets modern comfort.</p>
+                        <a href="hotels.html" class="btn" target="_blank">Read more</a>
+                    </div>
+
+                    <div class="services-item">
+                        <span class="services-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </span>
+                        <h3>Travel Guides</h3>
+                        <p class="text">Let our local experts lead you through Lebanon's hidden treasures and iconic landmarks.</p>
+                        <a href="guides.html" class="btn" target="_blank">Read more</a>
+                    </div>
+
+                    <div class="services-item">
+                        <span class="services-icon">
+                            <i class="fas fa-money-bill"></i>
+                        </span>
+                        <h3>Best Prices</h3>
+                        <p class="text">Embark on your Lebanese adventure with packages that offer unforgettable experiences at the right price.</p>
+                        <a href="prices.html" class="btn" target="_blank">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of services section -->
+
+        <!-- testimonials section -->
+        <section id="testimonials" class="py-4 scroll-animate">
+            <div class="container">
+                <div class="title-wrap">
+                    <span class="sm-title">What Our Travelers Say</span>
+                    <h2 class="lg-title">Testimonials</h2>
+                </div>
+
+                <div class="test-row">
+                    <div class="test-item">
+                        <p class="text">My trip to Beirut was an immersive dive into culture, history, and culinary delights. Lebanon’s charm is truly unforgettable.</p>
+                        <div class="test-item-info">
+                            <img src="images/test-1.jpg" alt="testimonial">
+                            <div>
+                                <h3>Kevin Wilson</h3>
+                                <p class="text">Trip to Beirut</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-item">
+                        <p class="text">Exploring Tripoli felt like stepping back in time. The ancient markets and warm locals made my journey magical.</p>
+                        <div class="test-item-info">
+                            <img src="images/test-2.jpg" alt="testimonial">
+                            <div>
+                                <h3>Ben Davis</h3>
+                                <p class="text">Trip to Tripoli</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-item">
+                        <p class="text">Byblos enchanted me with its ancient ruins and seaside serenity. A truly magical experience that touched my soul.</p>
+                        <div class="test-item-info">
+                            <img src="images/test-3.jpg" alt="testimonial">
+                            <div>
+                                <h3>Jaura Jones</h3>
+                                <p class="text">Trip to Byblos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of testimonials section -->
+
+        <!-- video section -->
+        <section id="video" class="scroll-animate">
+            <div class="video-wrapper flex">
+                <video loop>
+                    <source src="videos/video-section.mp4" type="video/mp4">
+                </video>
+                <button type="button" id="play-btn">
+                    <i class="fas fa-play"></i>
+                </button>
+            </div>
+        </section>
+        <!-- end of video section -->
+
+        <!-- footer -->
+        <footer class="py-4 scroll-animate">
+            <div class="container footer-row">
+                <div class="footer-item">
+                    <a href="index.html" class="site-brand">
+                        Trip<span>Boss</span>
+                    </a>
+                    <p class="text">Embark on a Lebanese adventure with TripBoss. Discover rich heritage, warm hospitality, and breathtaking landscapes that define Lebanon.</p>
+                </div>
+
+                <div class="footer-item">
+                    <h2>Follow us on:</h2>
+                    <ul class="social-links">
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/aliiyazbeck/"  target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-pinterest"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-google-plus"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-item">
+                    <h2>Popular Places:</h2>
+                    <ul>
+                        <li><a href="https://en.wikipedia.org/wiki/Beirut" target="_blank">Beirut</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Tripoli,_Lebanon" target="_blank">Tripoli</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Byblos" target="_blank">Byblos</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Sidon" target="_blank">Sidon</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Zahl%C3%A9" target="_blank">Zahle</a></li>
+                    </ul>
+                </div>
+
+                <div class="subscribe-form footer-item">
+                    <h2>Subscribe for Newsletter!</h2>
+                    <form method="POST" action="php/subscribe.php" class="flex">
+                        <input type="email" name="email" placeholder="Enter Email" class="form-control" required>
+                        <input type="submit" class="btn" value="Subscribe">
+                    </form>
+                </div>
+            </div>
+        </footer>
+        <!-- end of footer -->
+
+        <!-- js -->
+        <script src="js/script.js"></script>
+        <script>
+            // play/pause video
+            let video = document.querySelector('.video-wrapper video');
+            document.getElementById('play-btn').addEventListener('click', () => {
+                if(video.paused){
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+
+            // Scroll-triggered animation for all elements with the 'scroll-animate' class
+            const scrollElements = document.querySelectorAll('.scroll-animate');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            scrollElements.forEach(el => {
+                observer.observe(el);
+            });
+        </script>
+    </body>
+</html>

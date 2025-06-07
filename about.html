@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>TripBoss - About Us</title>
+        <meta name="description" content="Learn about TripBoss Lebanon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel = "stylesheet" href = "font/fonts.css">
+        <link rel = "stylesheet" href = "css/normalize.css">
+        <link rel = "stylesheet" href = "css/utility.css">
+        <link rel = "stylesheet" href = "css/style.css">
+        <link rel = "stylesheet" href = "css/responsive.css">
+        <style>
+            /* All elements with .scroll-animate will start hidden */
+            .scroll-animate {
+                opacity: 0;
+            }
+            /* When they become visible, they fade in smoothly */
+            .scroll-animate.visible {
+                animation: fadeInScroll 1.5s ease forwards;
+            }
+            @keyframes fadeInScroll {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            /* New title animation: slide in smoothly from the left (no jumping) */
+            .slide-in-title {
+                opacity: 0;
+                animation: slideInLeft 1.5s ease-out forwards;
+            }
+            @keyframes slideInLeft {
+                from {
+                    opacity: 0;
+                    transform: translateX(-50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <nav class = "navbar">
+            <div class = "container flex">
+                <a href = "index.html" class = "site-brand">
+                    Trip<span>Boss</span>
+                </a>
+
+                <button type = "button" id = "navbar-show-btn" class = "flex">
+                    <i class = "fas fa-bars"></i>
+                </button>
+                <div id = "navbar-collapse">
+                    <button type = "button" id = "navbar-close-btn" class = "flex">
+                        <i class = "fas fa-times"></i>
+                    </button>
+                    <ul class = "navbar-nav">
+                        <li class = "nav-item">
+                            <a href = "index.html" class = "nav-link">Home</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "gallery.html" class = "nav-link">Gallery</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "blog.html" class = "nav-link">Blog</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "about.html" class = "nav-link">About</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "contact.html" class = "nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header class = "flex header-sm scroll-animate">
+            <div class = "container">
+                <div class = "header-title slide-in-title">
+                    <h1>About Us</h1>
+                    <p>Your trusted guide to unforgettable experiences in Lebanon. Learn about our passion for travel and dedication to crafting your perfect Lebanese journey.</p>
+                </div>
+            </div>
+        </header>
+        <section id = "about" class = "py-4 scroll-animate">
+            <div class = "container">
+                <div class = "title-wrap">
+                    <span class = "sm-title">things to know about us</span>
+                    <h2 class = "lg-title">Our Lebanon Story</h2>
+                </div>
+
+                <div class = "about-row">
+                    <div class = "about-left my-2 scroll-animate">
+                        <img src = "images/about-img.jpg" alt = "about img">
+                    </div>
+                    <div class = "about-right">
+                        <h2>15 Years of Lebanese Travel Expertise</h2>
+                        <p class = "text">For over 15 years, TripBoss has been crafting exceptional travel experiences in Lebanon.  Born from a deep love for this beautiful country and a desire to share its hidden wonders, we've grown into Lebanon's leading travel agency.</p>
+                        <p class = "text">We are passionate about showcasing the best of Lebanon, from its historical treasures and vibrant cities to its stunning natural landscapes and warm, welcoming culture. Our team of local experts is dedicated to providing you with personalized service and insider knowledge, ensuring your Lebanese adventure is seamless and unforgettable.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id = "facts" class = "py-4 flex scroll-animate">
+            <div class = "container">
+                <div class = 'title-wrap'>
+                    <span class = "sm-title">know some facts about our agency in lebanon</span>
+                    <h2 class = "lg-title">Fun Facts about TripBoss Lebanon</h2>
+                </div>
+
+                <div class = "facts-row">
+                    <div class = "facts-item">
+                        <span class = "fas fa-camera-retro facts-icon"></span>
+                        <div class = "facts-info">
+                            <strong>2500+</strong>
+                            <p class = "text">photos of Lebanon shared</p>
+                        </div>
+                    </div>
+
+                    <div class = "facts-item">
+                        <span class = "fas fa-umbrella-beach  facts-icon"></span>
+                        <div class = "facts-info">
+                            <strong>50+</strong>
+                            <p class = "text">Lebanese beaches recommended</p>
+                        </div>
+                    </div>
+
+                    <div class = "facts-item">
+                        <span class = "fas fa-mountain facts-icon"></span>
+                        <div class = "facts-info">
+                            <strong>20+</strong>
+                            <p class = "text">Lebanese mountains hiked</p>
+                        </div>
+                    </div>
+
+                    <div class = "facts-item">
+                        <span class = "fas fa-city facts-icon"></span>
+                        <div class = "facts-info">
+                            <strong>30+</strong>
+                            <p class = "text">Lebanese cities explored</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class = "py-4 scroll-animate">
+            <div class = "container footer-row">
+                <div class = "footer-item">
+                    <a href = "index.html" class = "site-brand">
+                        Trip<span>Boss</span>
+                    </a>
+                    <p class = "text">Discover Lebanon with TripBoss, your premier travel experts. We are dedicated to crafting exceptional Lebanese experiences, showcasing the beauty and culture of this incredible destination.</p>
+                </div>
+
+                <div class = "footer-item">
+                    <h2>Follow us on: </h2>
+                    <ul class = "social-links">
+                        <li>
+                            <a href = "#">
+                                <i class = "fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/aliiyazbeck/" target="_blank">
+                                <i class = "fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "#">
+                                <i class = "fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "#">
+                                <i class = "fab fa-pinterest"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "#">
+                                <i class = "fab fa-google-plus"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "footer-item">
+                    <h2>Popular Places in Lebanon:</h2>
+                    <ul>
+                        <li><a href="https://en.wikipedia.org/wiki/Beirut" target="_blank">Beirut</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Tripoli,_Lebanon" target="_blank">Tripoli</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Byblos" target="_blank">Byblos</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Sidon" target="_blank">Sidon</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Baalbek" target="_blank">Baalbek</a></li>
+                    </ul>
+                </div>
+
+                <div class = "subscribe-form footer-item">
+                    <h2>Subscribe for Lebanon Newsletter!</h2>
+                    <form method="POST" action="php/subscribe.php" class="flex">
+                        <input type = "email" name="email" placeholder="Enter Email" class = "form-control">
+                        <input type = "submit" class = "btn" value = "Subscribe">
+                    </form>
+                </div>
+            </div>
+        </footer>
+        <script src = "js/script.js"></script>
+        <script>
+            // Scroll-triggered animation for all elements with the 'scroll-animate' class
+            const scrollElements = document.querySelectorAll('.scroll-animate');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            scrollElements.forEach(el => {
+                observer.observe(el);
+            });
+        </script>
+    </body>
+</html>
